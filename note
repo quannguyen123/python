@@ -1,0 +1,24 @@
+Cài đặt django:  pip install django
+Tạo project django: django-admin startproject site1
+Tạo migrate: python manage.py migrate
+Run project: python manage.py runserver 8888
+Tạo user admin: python manage.py createsuperuser
+Tạo module home: python manage.py startapp home
+- Tạo file home.html trong template
+- Khai báo view trong views.py
+- Khai báo app trong settings.py
+- Khai báo url trong urls.py
+
+Config db ở file: settigns.py
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'NAME': 'site1',
+                'USER': 'root',
+                'PASSWORD': '',
+                'HOST': 'localhost'
+            }
+        }
+
+Cài đặt kết nối mysql: pip install pymysql
+Chạy lại migrate với db mới: python manage.py migrate
